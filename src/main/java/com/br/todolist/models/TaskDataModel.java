@@ -11,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.br.todolist.enums.LevelOfImportance;
-import com.br.todolist.enums.TypesOfChores;
+import com.br.todolist.enums.TypesOfTask;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,17 +23,17 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name="chores")
-public class ChoresDataModel {
+@Table(name="task")
+public class TaskDataModel {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column
     private UUID id;
     
-    private TypesOfChores type;
+    private TypesOfTask type;
     private String description;
     private LevelOfImportance importance;
-    private String addressChores;
-    private LocalDateTime dateChore;
-    private LocalDateTime dateCreateChore; 
+    private String addressTask;
+    private LocalDateTime dateTask;
+    private LocalDateTime dateCreateTask; 
 }

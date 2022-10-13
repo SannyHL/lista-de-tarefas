@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 import com.br.todolist.enums.LevelOfImportance;
-import com.br.todolist.enums.TypesOfChores;
+import com.br.todolist.enums.TypesOfTask;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,13 +15,13 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class ChoresDataDTO {
+public class TaskDataDTO {
     
     private UUID id;
-    private TypesOfChores type;
+    private TypesOfTask type;
     private String description;
     private LevelOfImportance importance;
-    private String addressChores;
-    private LocalDateTime dateChore;
-    private LocalDateTime dateCreateChore;
+    private String addressTask;
+    private LocalDateTime dateTask;
+    private LocalDateTime dateCreateTask;
 }
