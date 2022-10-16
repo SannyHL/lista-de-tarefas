@@ -6,7 +6,7 @@
 
 <h3><a>API REST</a></h2>
 
-<h4>Api para controle de tarefas</h4>
+<h4>Api para lista de tarefas</h4>
 
 ### ⚠ Projeto em desenvolvimento...
 
