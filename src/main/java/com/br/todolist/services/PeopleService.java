@@ -2,7 +2,6 @@ package com.br.todolist.services;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +27,7 @@ public class PeopleService implements PeopleServiceInterface{
     }
 
     @Override
-    public PeopleModel findById(UUID id) {
+    public PeopleModel findById(Long id) {
         Optional<PeopleModel> peopleOptional = repository.findById(id);
         return peopleOptional.orElseThrow(() -> new ObjectNotFoundException("Id não encontrado"));
     }
@@ -44,7 +43,7 @@ public class PeopleService implements PeopleServiceInterface{
     }
 
     @Override
-    public void deleteById(UUID id) {
+    public void deleteById(Long id) {
         findById(id);
         repository.deleteById(id);
         

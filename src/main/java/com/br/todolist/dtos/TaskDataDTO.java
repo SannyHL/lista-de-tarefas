@@ -1,7 +1,7 @@
 package com.br.todolist.dtos;
 
 import java.time.LocalDateTime;
-import java.util.UUID;
+
 
 import com.br.todolist.enums.LevelOfImportance;
 import com.br.todolist.enums.TypesOfTask;
@@ -17,7 +17,7 @@ import lombok.Setter;
 @Setter
 public class TaskDataDTO {
     
-    private UUID id;
+    private Long id;
     private TypesOfTask type;
     private String description;
     private LevelOfImportance importance;

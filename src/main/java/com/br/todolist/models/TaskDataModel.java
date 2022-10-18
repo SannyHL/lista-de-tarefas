@@ -1,7 +1,6 @@
 package com.br.todolist.models;
 
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -30,7 +29,7 @@ public class TaskDataModel {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column
-    private UUID id;
+    private Long id;
     
     private TypesOfTask type;
     private String description;

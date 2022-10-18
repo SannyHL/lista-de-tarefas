@@ -1,7 +1,5 @@
 package com.br.todolist.models;
 
-import java.util.UUID;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,7 +24,7 @@ public class PeopleModel {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column
-    private UUID id;
+    private Long id;
     
     private String name;
     private String password;

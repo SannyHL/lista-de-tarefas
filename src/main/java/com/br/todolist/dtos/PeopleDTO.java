@@ -1,6 +1,6 @@
 package com.br.todolist.dtos;
 
-import java.util.UUID;
+
 
 import javax.validation.constraints.NotBlank;
 
@@ -15,7 +15,7 @@ import lombok.Setter;
 @Setter
 public class PeopleDTO {
     
-    private UUID id;
+    private Long id;
     @NotBlank
     private String name;
     @NotBlank
