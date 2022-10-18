@@ -2,15 +2,16 @@ package com.br.todolist.controllers;
 
 import java.net.URI;
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -45,7 +46,7 @@ public class PeopleController {
 
     @GetMapping(ID)
     @ApiOperation("Find by id")
-    public ResponseEntity<PeopleDTO> findById(@PathVariable UUID id) throws Exception{
+    public ResponseEntity<PeopleDTO> findById(@PathVariable Long id) throws Exception{
         return ResponseEntity.ok().body(mapper.map(service.findById(id), PeopleDTO.class));
     }
 
@@ -56,5 +57,20 @@ public class PeopleController {
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path(ID).buildAndExpand(peopleModel.getId()).toUri();
         return ResponseEntity.created(uri).build();
     }
+
+    @DeleteMapping(ID)
+    @ApiOperation("Delete")
+    public ResponseEntity<PeopleDTO> deleteById(@PathVariable Long id){
+        service.deleteById(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping(ID)
+    @ApiOperation("Update")
+    public ResponseEntity<PeopleDTO> update(@PathVariable Long id, @RequestBody PeopleDTO peopleDTO){
+        peopleDTO.setId(id);
+        return ResponseEntity.ok().body(mapper.map(service.update(peopleDTO), PeopleDTO.class));
+    }
+
 
 }
