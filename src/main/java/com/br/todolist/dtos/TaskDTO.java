@@ -15,7 +15,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class TaskDataDTO {
+public class TaskDTO {
     
     private Long id;
     private TypesOfTask type;

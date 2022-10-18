@@ -25,7 +25,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name="task")
-public class TaskDataModel {
+public class TaskModel {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column
