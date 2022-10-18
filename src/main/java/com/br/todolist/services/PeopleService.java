@@ -6,6 +6,7 @@ import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.br.todolist.dtos.PeopleDTO;
 import com.br.todolist.exceptions.ObjectNotFoundException;
@@ -13,6 +14,7 @@ import com.br.todolist.interfaces.PeopleServiceInterface;
 import com.br.todolist.models.PeopleModel;
 import com.br.todolist.repositories.PeopleRepository;
 
+@Service
 public class PeopleService implements PeopleServiceInterface{
     @Autowired
     private PeopleRepository repository;
