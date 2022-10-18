@@ -60,14 +60,15 @@ public class PeopleController {
 
     @DeleteMapping(ID)
     @ApiOperation("Delete")
-    public ResponseEntity<PeopleDTO> deleteById(@PathVariable Long id){
+    public ResponseEntity<PeopleDTO> deleteById(@PathVariable Long id) throws Exception {
         service.deleteById(id);
         return ResponseEntity.noContent().build();
     }
 
     @PutMapping(ID)
     @ApiOperation("Update")
-    public ResponseEntity<PeopleDTO> update(@PathVariable Long id, @RequestBody PeopleDTO peopleDTO){
+    public ResponseEntity<PeopleDTO> update(@PathVariable Long id, @RequestBody PeopleDTO peopleDTO) throws Exception {
+        findById(id);
         peopleDTO.setId(id);
         return ResponseEntity.ok().body(mapper.map(service.update(peopleDTO), PeopleDTO.class));
     }
