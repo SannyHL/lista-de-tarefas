@@ -4,7 +4,7 @@ public enum LevelOfImportance {
     LEVE("Leve"),
     MEDIO("Médio"),
     IMPORTANTE("Importante"),
-    MUITOIMPORTANTE("Muito Importante"),
+    MUITO_IMPORTANTE("Muito Importante"),
     URGENTE("Urgente");
 
     LevelOfImportance(String levelImportance){
