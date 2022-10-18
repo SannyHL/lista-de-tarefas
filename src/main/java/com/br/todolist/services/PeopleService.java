@@ -1,12 +1,14 @@
 package com.br.todolist.services;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.br.todolist.dtos.PeopleDTO;
+import com.br.todolist.exceptions.ObjectNotFoundException;
 import com.br.todolist.interfaces.PeopleServiceInterface;
 import com.br.todolist.models.PeopleModel;
 import com.br.todolist.repositories.PeopleRepository;
@@ -25,7 +27,8 @@ public class PeopleService implements PeopleServiceInterface{
 
     @Override
     public PeopleModel findById(UUID id) {
-        return null;
+        Optional<PeopleModel> peopleOptional = repository.findById(id);
+        return peopleOptional.orElseThrow(() -> new ObjectNotFoundException("Id não encontrado"));
     }
 
     @Override
