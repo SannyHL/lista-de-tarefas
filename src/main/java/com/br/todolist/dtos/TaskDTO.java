@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 
 import com.br.todolist.enums.LevelOfImportance;
 import com.br.todolist.enums.TypesOfTask;
+import com.br.todolist.models.PeopleModel;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,6 +23,7 @@ public class TaskDTO {
     private String description;
     private LevelOfImportance importance;
     private String addressTask;
+    private PeopleModel people;
     private LocalDateTime dateTask;
     private LocalDateTime dateCreateTask;
 }
