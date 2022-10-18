@@ -4,9 +4,9 @@ import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.br.todolist.models.TaskDataModel;
+import com.br.todolist.models.PeopleModel;
 
-public interface PeopleRepository extends JpaRepository<TaskDataModel, UUID>{
+public interface PeopleRepository extends JpaRepository<PeopleModel, UUID>{
 
     
 }
