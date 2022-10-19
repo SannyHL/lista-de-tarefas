@@ -12,8 +12,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import com.br.todolist.enums.LevelOfImportance;
 import com.br.todolist.enums.TypesOfTask;
 
