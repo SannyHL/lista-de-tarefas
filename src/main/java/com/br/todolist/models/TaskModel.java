@@ -1,7 +1,7 @@
 package com.br.todolist.models;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -39,7 +39,7 @@ public class TaskModel {
     private LevelOfImportance importance;
     private String addressTask;
     @DateTimeFormat(pattern = "dd/MM/yyyy")
-    private Date dateTask;
+    private LocalDate dateTask;
     private LocalDateTime dateCreateTask;
     
     @ManyToOne
