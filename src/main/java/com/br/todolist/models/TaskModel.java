@@ -38,10 +38,9 @@ public class TaskModel {
     private String description;
     private LevelOfImportance importance;
     private String addressTask;
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    
     private LocalDate dateTask;
     private LocalDateTime dateCreateTask;
-    
     @ManyToOne
     @JoinColumn(name="people_id")
     private PeopleModel people;
