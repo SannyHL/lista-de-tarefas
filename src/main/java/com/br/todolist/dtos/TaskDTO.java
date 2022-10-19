@@ -1,7 +1,7 @@
 package com.br.todolist.dtos;
 
 import java.time.LocalDateTime;
-
+import java.util.Date;
 
 import com.br.todolist.enums.LevelOfImportance;
 import com.br.todolist.enums.TypesOfTask;
@@ -24,6 +24,6 @@ public class TaskDTO {
     private LevelOfImportance importance;
     private String addressTask;
     private PeopleModel people;
-    private LocalDateTime dateTask;
+    private Date dateTask;
     private LocalDateTime dateCreateTask;
 }
