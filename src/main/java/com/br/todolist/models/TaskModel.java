@@ -1,6 +1,7 @@
 package com.br.todolist.models;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 import com.br.todolist.enums.LevelOfImportance;
 import com.br.todolist.enums.TypesOfTask;
@@ -35,7 +38,8 @@ public class TaskModel {
     private String description;
     private LevelOfImportance importance;
     private String addressTask;
-    private LocalDateTime dateTask;
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    private Date dateTask;
     private LocalDateTime dateCreateTask;
     
     @ManyToOne
