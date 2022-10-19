@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import com.br.todolist.enums.LevelOfImportance;
 import com.br.todolist.enums.TypesOfTask;
 import com.br.todolist.models.PeopleModel;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,6 +19,7 @@ import lombok.Setter;
 @Setter
 public class TaskDTO {
     
+    @JsonIgnore
     private Long id;
     private TypesOfTask type;
     private String description;
@@ -25,5 +27,6 @@ public class TaskDTO {
     private String addressTask;
     private LocalDate dateTask;
     private PeopleModel people;
+    @JsonIgnore
     private LocalDateTime dateCreateTask;
 }
