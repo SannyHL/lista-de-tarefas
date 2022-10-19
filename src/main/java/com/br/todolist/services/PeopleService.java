@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.br.todolist.dtos.PeopleDTO;
@@ -19,6 +20,8 @@ public class PeopleService implements PeopleServiceInterface{
     private PeopleRepository repository;
     @Autowired
     private ModelMapper mapper;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
 
     @Override
@@ -34,6 +37,8 @@ public class PeopleService implements PeopleServiceInterface{
 
     @Override
     public PeopleModel create(PeopleDTO peopleDTO) {
+        String encoder = this.passwordEncoder.encode(peopleDTO.getPassword());
+        peopleDTO.setPassword(encoder);
         return repository.save(mapper.map(peopleDTO, PeopleModel.class));
     }
 
