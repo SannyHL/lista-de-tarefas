@@ -1,6 +1,9 @@
 package com.br.todolist.dtos;
 
 import javax.validation.constraints.NotBlank;
+
+import org.hibernate.validator.constraints.UniqueElements;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
@@ -20,7 +23,7 @@ public class PeopleDTO {
     private String name;
     @NotBlank
     private String password;
-
+    @UniqueElements
     @NotBlank
     private String email;
 }
