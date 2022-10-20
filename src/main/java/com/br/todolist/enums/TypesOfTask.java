@@ -4,5 +4,6 @@ public enum TypesOfTask {
     ESTUDO,
     TRABALHO,
     LAZER,
-    VIAGEM
+    VIAGEM,
+    OUTROS
 }
