@@ -26,7 +26,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/people")
-@Api(tags = "API Controller")
+@Api(tags = "People Controller")
 public class PeopleController {
     
     /**

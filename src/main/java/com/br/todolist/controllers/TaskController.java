@@ -28,7 +28,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/task")
-@Api("Task Controller")
+@Api(tags = "Task Controller")
 public class TaskController {
 
     
