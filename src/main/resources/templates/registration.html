@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Euphoria+Script&display=swap" rel="stylesheet">
+    <title>Registration</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            background-image: url(../static/imagens/note.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .title{
+            font-family: 'Bungee Shade', cursive;
+            font-size: 3.5rem;
+            text-align: center;
+        }
+        .container{
+            height: 23rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5%;
+        }
+        .container__input input{
+            height: 3rem;
+            width: 30rem;
+            background: #EEEDE9;
+            border: 2px dashed #E1C89F;
+            font-size: 1.5rem;
+            color: black;
+            padding: 3px;
+        }
+        .container__input input::placeholder{
+            text-align: center;
+            font-family: 'Euphoria Script', cursive;
+            font-size: 1.5rem;
+            color: rgb(119, 114, 114);
+        }
+        .container__button{
+            height: 2rem;
+            margin: 4%;
+        }
+        .container__button button{
+            height: 6rem;
+            width: 6rem;
+            border: 3px solid #E1C89F;
+            border-radius: 50%;
+            color: #463228;
+            font-weight: bold;
+            font-family:  cursive;
+            font-size: 1rem;
+        }
+        .container__button button:hover{
+            background: #463228;
+            color: #EEEDE9;
+            border: 3px solid #463228;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1 class="title">Cadastre-se</h1>
+    </header>
+    <main>
+        <form action="/registration" method="post">
+            <section class="container">
+                <div class="container__input">
+                    <input type="name" name="name" required placeholder="Nome">
+                </div>
+                <div class="container__input">
+                    <input type="password" name="password" required placeholder="Senha">
+                </div>
+                <div class="container__input">
+                    <input type="email" name="email" required placeholder="Email">
+                </div>
+                <div class="container__button">
+                    <button type="submit">
+                        Cadastrar
+                    </button>
+                </div>
+            </section>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>
